@@ -11,7 +11,7 @@ const photoNumber = document.getElementById("photoNumber");
 
 let currentPhoto = 0;
 
-const totalPhotos = 300;
+const totalPhotos = 301;
 
 
 /* ==============================
