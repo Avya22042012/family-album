@@ -1,3 +1,53 @@
+/* ==============================
+   LOGIN SYSTEM
+============================== */
+
+const CORRECT_USER_ID = "avya";
+const CORRECT_PASSWORD = "Avya@22042012@";
+
+const loginScreen = document.getElementById("loginScreen");
+const userIdInput = document.getElementById("userId");
+const passwordInput = document.getElementById("userPassword");
+const loginBtn = document.getElementById("loginBtn");
+const loginError = document.getElementById("loginError");
+
+loginBtn.addEventListener("click", checkLogin);
+
+passwordInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        checkLogin();
+    }
+});
+
+function checkLogin() {
+
+    const userId = userIdInput.value.trim();
+    const password = passwordInput.value;
+
+    if (
+        userId === CORRECT_USER_ID &&
+        password === CORRECT_PASSWORD
+    ) {
+        loginScreen.style.display = "none";
+        document.body.style.overflow = "";
+    } else {
+        loginError.classList.add("show");
+
+        passwordInput.value = "";
+        passwordInput.focus();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 const gallery = document.getElementById("gallery");
 
 const lightbox = document.getElementById("lightbox");
